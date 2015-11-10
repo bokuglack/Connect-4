@@ -63,6 +63,4 @@ Connect 4 UML:
     - board : Board
     - view : Connect4View
     - controller : Connect4Controller
-    
-  Connect4Game
     + main() : void //Project main method. Game is run here
