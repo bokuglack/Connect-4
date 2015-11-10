@@ -18,7 +18,7 @@ Connect 4 UML:
     + getScore() : int
     + setScore(score : int) : void
     + toString() : String
-  Board implements KeyListener
+  Board 
     - gameSize : int
     - board : Chip[][]
     - player1 : Player
@@ -37,17 +37,17 @@ Connect 4 UML:
     + connect4() : boolean
     + dropChip(column : row) : void
     + move() : void
-    + keyTyped(e : KeyEvent) : void
-    + keyPressed(e : KeyEvent) : void
-    + keyReleased(e : KeyEvent) : void
     + toString() : String
     + copyBoard() : Board
   
-  Connect4View
+  Connect4View implements KeyListener
     - currentBoard : board
     
     + Connect4View(b : Board)
     
+    + keyTyped(e : KeyEvent) : void
+    + keyPressed(e : KeyEvent) : void
+    + keyReleased(e : KeyEvent) : void
     + setBoard(b : board) : void
     + updateDisplay() : void
   
