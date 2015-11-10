@@ -10,6 +10,7 @@ Connect 4 UML:
     + toString() : String
   Player
     - number : int
+    - score : int
     
     + Player()
     + Player(number : int)
