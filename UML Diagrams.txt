@@ -1,6 +1,67 @@
 Connect 4 UML:
   Chip
     - player : int
+    
     + Chip()
     + Chip(player : int)
+    
+    + getPlayerChip() : int
+    + setPlayerChip(player : int) : void
+    + toString() : String
+  Player
+    - number : int
+    
+    + Player()
+    + Player(number : int)
     + getPlayerNumber() : int
+    + setPlayerNumber(number : int) : void
+    + getScore() : int
+    + setScore(score : int) : void
+    + toString() : String
+  Board implements KeyListener
+    - gameSize : int
+    - board : Chip[][]
+    - player1 : Player
+    - player2 : Player
+    
+    + Board()
+    + Board(size : int)
+    + Board(size : int, p1 : Player, p2 : Player)
+    + Board(filename : String)
+    
+    + loadBoardState(filename : String) : void
+    + reset() : void
+    + countEmptySpaces() : int
+    + getScore() : int
+    + isFull() : boolean
+    + connect4() : boolean
+    + dropChip(column : row) : void
+    + move() : void
+    + keyTyped(e : KeyEvent) : void
+    + keyPressed(e : KeyEvent) : void
+    + keyReleased(e : KeyEvent) : void
+    + toString() : String
+    + copyBoard() : Board
+  
+  Connect4View
+    - currentBoard : board
+    
+    + Connect4View(b : Board)
+    
+    + setBoard(b : board) : void
+    + updateDisplay() : void
+  
+  Connect4Controller
+    - board : Board
+    - view : Connect4View
+    
+    + Connect4Controller(b : Board, v : Connect4View)
+    
+    + runGame() : void
+  
+  Connect4
+    - board : Board
+    - view : Connect4View
+    - controller : Connect4Controller
+    
+    + main() : void //Project main method. Game is run here
