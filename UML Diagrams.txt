@@ -42,14 +42,11 @@ Connect 4 UML:
     + copyBoard() : Board
   
   Connect4View implements KeyListener
-    - currentBoard : board
+    - currentBoard : Board
     
     + Connect4View(b : Board)
     
-    + keyTyped(e : KeyEvent) : void
-    + keyPressed(e : KeyEvent) : void
-    + keyReleased(e : KeyEvent) : void
-    + setBoard(b : board) : void
+    + setBoard(b : Board) : void
     + updateDisplay() : void
   
   Connect4Controller
@@ -59,6 +56,9 @@ Connect 4 UML:
     + Connect4Controller(b : Board, v : Connect4View)
     
     + runGame() : void
+    + keyTyped(e : KeyEvent) : void
+    + keyPressed(e : KeyEvent) : void
+    + keyReleased(e : KeyEvent) : void
   
   Connect4
     - board : Board
