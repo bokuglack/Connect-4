@@ -1,5 +1,7 @@
 package OP010_OP030_OP040.Connect4;
 
+import java.awt.event.KeyListener;
+
 public class Connect4Controller implements KeyListener{
   private Board board;
   private Connect4View view;

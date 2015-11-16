@@ -3,7 +3,7 @@ package OP010_OP030_OP040.Connect4;
 public class Connect4View implements KeyListener{
   private Board currentBoard;
   
-  public Connect4view(Board b){
+  public Connect4View(Board b){
     currentBoard = b;
   }
   
