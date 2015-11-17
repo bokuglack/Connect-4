@@ -1,7 +1,3 @@
-//needs move and drop chip
-//however to add drop chip I need to modify player
-//currently in the process of modifying player 
-// -Arjun
 package OP010_OP030_OP040.Connect4;
 public class Board {
 	private int gamesize;
@@ -85,5 +81,13 @@ public class Board {
 		}
 
 		return copy;
+	}
+	
+	public void move(boolean p, int dir){
+		if(p){
+			player1.setPosition((player1.getPostion() + dir)%gamesize);
+		}else{
+			player2.setPosition((player2.getPostion() + dir)%gamesize);
+		}
 	}
 }
