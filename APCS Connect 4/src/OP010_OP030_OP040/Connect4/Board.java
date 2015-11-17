@@ -90,4 +90,8 @@ public class Board {
 			player2.setPosition((player2.getPostion() + dir)%gamesize);
 		}
 	}
+	
+	public void dropChip(int column, int row, int p){
+		board[column][row].setPlayerChip(p);
+	}
 }
