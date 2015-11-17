@@ -6,6 +6,7 @@ public class Player {
 	private int number;
 	private int score;
 	private int gamesWon;
+	private int position;
 	
 	/**
 	* Summary fragment: Constructor
@@ -18,6 +19,7 @@ public class Player {
 		number = 0;
 		score = 0;
 		gamesWon = 0;
+		position = 3;
 	}
 	
 	/**
@@ -39,6 +41,14 @@ public class Player {
 	*/
 	public int getPlayerNumber(){
 		return number;
+	}
+	
+	public int getPosition(){
+		return position;
+	}
+	
+	public void setPosition(int pos){
+		position = pos;
 	}
 	
 	/**
